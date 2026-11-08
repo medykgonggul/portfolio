@@ -1,0 +1,1654 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px #0000000d;
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334155;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.hero {
+    padding: 100px 8%;
+    background: #e8efff;
+}
+
+.label {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-bottom: 24px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.section {
+    padding: 65px 8%;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skill {
+    background: white;
+    padding: 15px 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000a;
+}
+
+.project-card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px #0000000d;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #1e293b;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 45px 6%;
+    }
+}
+
+/* Hari 32: Hero dengan foto profil */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h2 {
+    color: #2563eb;
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.hero-image {
+    flex: 0 0 280px;
+}
+
+.hero-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 8px 25px #00000018;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    margin-left: 8px;
+}
+
+.btn-outline:hover {
+    background: #dbeafe;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image {
+        flex: none;
+        width: 190px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+}
+
+/* Hari 33: Kartu proyek portofolio */
+
+.project-intro {
+    max-width: 650px;
+    margin-bottom: 28px;
+    color: #64748b;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.project-card {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 20px #00000008;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px #00000012;
+}
+
+.project-image {
+    height: 210px;
+    overflow: hidden;
+    background: #e8efff;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+}
+
+.project-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+}
+
+.project-content {
+    padding: 24px;
+}
+
+.project-category {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.project-content > p:not(.project-category) {
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tech-list span {
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.project-card .btn {
+    margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+}
+
+/* Hari 34: Tombol kontak */
+
+#kontak {
+    background: #e8efff;
+    text-align: center;
+}
+
+.contact-description {
+    max-width: 600px;
+    margin: 0 auto 24px;
+    color: #64748b;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-whatsapp {
+    background: #15803d;
+}
+
+.btn-whatsapp:hover {
+    background: #166534;
+}
+
+.btn-email {
+    background: #2563eb;
+}
+
+.btn-email:hover {
+    background: #1d4ed8;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 25px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .contact-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-buttons .btn {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+/* Hari 35: Animasi saat scroll */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efek hover pada kartu proyek */
+
+.project-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px #00000014;
+}
+
+/* Hormati pengaturan pengguna yang mengurangi animasi */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .project-card {
+        transition: none;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+/* DARK MODE */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section,
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #ffffff;
+}
+
+#darkModeToggle {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+    font-size: 14px;
+}
+#contactForm {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contactForm button {
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#formMessage {
+    margin-top: 12px;
+}
+#contactForm {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contactForm button {
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#formMessage {
+    margin-top: 12px;
+}
+/* =========================================================
+   ANIMASI MODERN — tempel di paling bawah style.css
+   ========================================================= */
+
+:root {
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUpSoft {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes blinkCaret {
+    50% { opacity: 0; }
+}
+
+/* ---------- 1. HERO ---------- */
+
+/* Background gradient bergerak pelan */
+.hero {
+    background: linear-gradient(120deg, #e8efff, #d6e4ff, #e6ddff, #e8efff);
+    background-size: 300% 300%;
+    animation: gradientShift 18s ease infinite;
+}
+
+body.dark-mode .hero {
+    background-image: linear-gradient(120deg, #1e1e1e, #1a2540, #251d3d, #1e1e1e);
+}
+
+/* Teks hero: fade-in + slide-up bertahap */
+.hero-text > * {
+    animation: fadeUp 0.8s var(--ease-out) backwards;
+}
+.hero-text > :nth-child(1) { animation-delay: 0.10s; }
+.hero-text > :nth-child(2) { animation-delay: 0.20s; }
+.hero-text > :nth-child(3) { animation-delay: 0.35s; }
+.hero-text > :nth-child(4) { animation-delay: 0.50s; }
+.hero-text > :nth-child(5) { animation-delay: 0.65s; }
+.hero-text > :nth-child(6) { animation-delay: 0.75s; }
+
+/* Kursor typing pada nama */
+.hero h1.typing::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 0.9em;
+    margin-left: 4px;
+    background: #2563eb;
+    vertical-align: -0.08em;
+    animation: blinkCaret 0.8s steps(1) infinite;
+}
+
+/* Foto profil: zoom-in lalu floating halus */
+.hero-image {
+    animation: zoomIn 1s var(--ease-out) 0.3s backwards;
+}
+
+.hero-image img {
+    animation: floatY 7s ease-in-out 1.4s infinite;
+}
+
+/* ---------- Tombol (hero, proyek, kontak) ---------- */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s var(--ease-out),
+        box-shadow 0.25s ease;
+}
+
+/* Efek kilau yang menyapu tombol saat hover */
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, #ffffff40 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px #2563eb40;
+}
+
+.btn:hover::before {
+    transform: translateX(120%);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-whatsapp:hover {
+    box-shadow: 0 10px 22px #15803d40;
+}
+
+.btn-outline:hover {
+    box-shadow: 0 10px 22px #2563eb26;
+}
+
+/* Tombol demo proyek: panah muncul saat hover */
+.project-card .btn:not(.btn-outline)::after {
+    content: "→";
+    display: inline-block;
+    max-width: 0;
+    margin-left: 0;
+    opacity: 0;
+    vertical-align: bottom;
+    transition: max-width 0.3s ease, margin-left 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card .btn:not(.btn-outline):hover::after {
+    max-width: 1.5em;
+    margin-left: 8px;
+    opacity: 1;
+}
+
+/* ---------- 2. PROFIL / TENTANG ---------- */
+#tentang.active > * {
+    animation: fadeUpSoft 0.7s var(--ease-out) backwards;
+}
+#tentang.active > :nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* ---------- 3. SKILLS (stagger) ---------- */
+/* Class .stagger-item ditambahkan lewat JS, jadi tanpa JS kartu tetap terlihat */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 90ms);
+}
+
+.stagger-item.show {
+    opacity: 1;
+    transform: none;
+}
+
+/* Setelah animasi muncul selesai, delay dihapus supaya hover responsif */
+.stagger-item.anim-done {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition-delay: 0s;
+}
+
+.skill {
+    cursor: default;
+}
+
+.skill:hover,
+.skill.show:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 26px #2563eb26;
+}
+
+/* ---------- 4. PROYEK ---------- */
+/* Menimpa transition lama supaya opacity ikut halus + stagger antar kartu */
+.project-card.reveal {
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s var(--ease-out),
+        box-shadow 0.3s ease;
+    transition-delay: calc(var(--i, 0) * 120ms);
+}
+
+.project-card.reveal.anim-done {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition-delay: 0s;
+}
+
+/* Zoom gambar saat hover */
+.project-image img {
+    transition: transform 0.6s var(--ease-out);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+.project-placeholder span {
+    display: inline-block;
+    transition: transform 0.5s var(--ease-out);
+}
+
+.project-card:hover .project-placeholder span {
+    transform: scale(1.2) rotate(12deg);
+}
+
+/* ---------- 5. KONTAK ---------- */
+#kontak.active .contact-buttons {
+    animation: fadeUp 0.7s var(--ease-out) 0.1s backwards;
+}
+
+#kontak.active #contactForm {
+    animation: fadeUp 0.8s var(--ease-out) 0.25s backwards;
+}
+
+#contactForm input,
+#contactForm textarea {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px #2563eb26;
+}
+
+#contactForm button {
+    transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease, background 0.25s ease;
+}
+
+#contactForm button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px #2563eb40;
+}
+
+/* Siap dipakai kalau nanti kamu menambah ikon sosial media:
+   <div class="social-links"><a href="#">...</a></div> */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #2563eb;
+    text-decoration: none;
+    box-shadow: 0 3px 12px #0000000f;
+    transition: transform 0.3s var(--ease-out), background 0.25s ease, color 0.25s ease, box-shadow 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #2563eb;
+    color: #ffffff;
+    transform: translateY(-5px) rotate(8deg) scale(1.1);
+    box-shadow: 0 10px 22px #2563eb40;
+}
+
+/* ---------- 6. NAVBAR ---------- */
+.navbar {
+    transition:
+        padding 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.navbar.scrolled {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #ffffffd9;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 24px #0f172a14;
+}
+
+body.dark-mode .navbar.scrolled {
+    background-color: #1e1e1ed9;
+    box-shadow: 0 6px 24px #00000066;
+}
+
+.nav-links a {
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: #2563eb;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease-out);
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+#darkModeToggle {
+    transition: transform 0.25s var(--ease-out), background 0.25s ease;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.06);
+    background-color: #1d4ed8;
+}
+
+/* ---------- Perbaikan kecil Dark Mode ---------- */
+/* Kartu skill & proyek tadinya putih dengan teks putih (tidak terbaca) */
+body.dark-mode .skill {
+    background: #2a2a2a;
+}
+
+body.dark-mode .project-card {
+    background: #252525;
+    border-color: #333333;
+}
+
+/* ---------- AKSESIBILITAS: kurangi animasi ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .stagger-item {
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero {
+        background-size: 100% 100%;
+    }
+}
+/* =========================================================
+   MODAL FORM KONTAK
+   ========================================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #0f172a99;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 32px 28px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px #0f172a40;
+    transform: translateY(24px) scale(0.96);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.modal.open .modal-box {
+    transform: none;
+}
+
+.modal-box h3 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.modal-sub {
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.modal-box #contactForm {
+    max-width: none;
+    margin: 0;
+}
+
+.modal-box #contactForm label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.modal-box #contactForm button {
+    width: 100%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #1e293b;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.modal-close:hover {
+    background: #dbeafe;
+    transform: rotate(90deg);
+}
+
+/* Cegah halaman di belakang ikut ter-scroll saat modal terbuka */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Dark mode */
+body.dark-mode .modal-box {
+    background: #1e1e1e;
+}
+
+body.dark-mode .modal-sub {
+    color: #cbd5e1;
+}
+
+body.dark-mode .modal-close {
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark-mode .modal-box #contactForm input,
+body.dark-mode .modal-box #contactForm textarea {
+    background: #2a2a2a;
+    border-color: #444444;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .modal-box {
+        padding: 28px 20px;
+    }
+}
+/* =========================================================
+   TEMA REAL MADRID — putih, navy, emas
+   ========================================================= */
+
+:root {
+    --rm-navy: #0b1f4b;
+    --rm-navy-dark: #06122e;
+    --rm-navy-mid: #13357f;
+    --rm-gold: #febe10;
+    --rm-gold-soft: #f5d77a;
+
+    /* Foto background hero (opsional). Hapus tanda komentar untuk memakai:
+       letakkan fotomu di folder images/ lalu sesuaikan nama file. */
+    /* --foto-hero: url("images/stadion.jpg"); */
+}
+
+/* ---------- Dasar halaman ---------- */
+body {
+    background: #f5f7fc;
+    color: var(--rm-navy);
+}
+
+/* Pola garis lapangan tipis di belakang halaman */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            #0b1f4b08 0 90px,
+            transparent 90px 180px
+        );
+}
+
+body.dark-mode {
+    background: #050b1f;
+    color: #ffffff;
+}
+
+body.dark-mode::before {
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            #ffffff06 0 90px,
+            transparent 90px 180px
+        );
+}
+
+/* ---------- Navbar ---------- */
+body .navbar {
+    background-color: #ffffff;
+    border-bottom: 3px solid var(--rm-gold);
+}
+
+body .logo {
+    color: var(--rm-navy);
+}
+
+body .nav-links a {
+    color: var(--rm-navy);
+    font-weight: bold;
+}
+
+body .nav-links a:hover {
+    color: var(--rm-navy-mid);
+}
+
+body .nav-links a::after {
+    background: var(--rm-gold);
+}
+
+body.dark-mode .navbar {
+    background-color: #08122e;
+}
+
+body.dark-mode .logo {
+    color: var(--rm-gold);
+}
+
+body.dark-mode .nav-links a {
+    color: #e2e8f0;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: var(--rm-gold);
+}
+
+body #darkModeToggle {
+    background-color: var(--rm-navy);
+    color: var(--rm-gold);
+    font-weight: bold;
+}
+
+body #darkModeToggle:hover {
+    background-color: var(--rm-navy-mid);
+}
+
+/* ---------- Hero ---------- */
+body .hero,
+body.dark-mode .hero {
+    position: relative;
+    overflow: hidden;
+    background-image:
+        linear-gradient(120deg, #06122e, #0b2a6b, #13357f, #06122e);
+    background-size: 300% 300%;
+    background-color: var(--rm-navy-dark);
+    color: #ffffff;
+}
+
+/* Lapisan foto (opsional, aktif kalau --foto-hero diisi) */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--foto-hero, none);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Lingkaran tengah lapangan + cahaya spotlight yang mengikuti mouse */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(
+            500px circle at var(--mx, 70%) var(--my, 30%),
+            #febe1026,
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 88% 115%,
+            transparent 0 258px,
+            #ffffff1f 259px 262px,
+            transparent 263px
+        ),
+        linear-gradient(90deg, transparent 49.8%, #ffffff0f 50%, transparent 50.2%);
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+body .hero h1,
+body .hero p {
+    color: #ffffff;
+}
+
+body .hero h2 {
+    color: var(--rm-gold);
+    letter-spacing: 1px;
+}
+
+body .hero .label {
+    color: var(--rm-gold);
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+body .hero h1.typing::after {
+    background: var(--rm-gold);
+}
+
+body .hero-image img {
+    border: 6px solid var(--rm-gold);
+    box-shadow: 0 12px 40px #00000066, 0 0 0 10px #febe1022;
+}
+
+/* ---------- Tombol ---------- */
+body .btn {
+    background: var(--rm-gold);
+    color: var(--rm-navy-dark);
+    font-weight: bold;
+}
+
+body .btn:hover {
+    background: var(--rm-gold-soft);
+    box-shadow: 0 10px 22px #febe1055;
+}
+
+body .btn-outline {
+    background: transparent;
+    color: var(--rm-gold);
+    border: 2px solid var(--rm-gold);
+}
+
+body .btn-outline:hover {
+    background: #febe1022;
+    color: var(--rm-gold-soft);
+}
+
+/* Tombol outline di luar hero (kartu proyek) memakai navy */
+body .project-card .btn-outline {
+    color: var(--rm-navy);
+    border-color: var(--rm-navy);
+}
+
+body .project-card .btn-outline:hover {
+    background: #0b1f4b14;
+}
+
+body .btn-whatsapp {
+    background: #15803d;
+    color: #ffffff;
+}
+
+body .btn-whatsapp:hover {
+    background: #166534;
+    box-shadow: 0 10px 22px #15803d55;
+}
+
+body .btn-email {
+    background: var(--rm-gold);
+    color: var(--rm-navy-dark);
+}
+
+/* ---------- Section & judul ---------- */
+body .section h2 {
+    position: relative;
+    padding-bottom: 14px;
+    color: var(--rm-navy);
+}
+
+body .section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--rm-gold), var(--rm-gold-soft));
+}
+
+body #kontak h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body .section .label {
+    color: #b8860b;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+body.dark-mode .section {
+    background-color: #0a1530;
+}
+
+body.dark-mode .section h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .section .label {
+    color: var(--rm-gold);
+}
+
+/* ---------- Skills ---------- */
+body .skill {
+    background: #ffffff;
+    color: var(--rm-navy);
+    font-weight: bold;
+    border-left: 4px solid var(--rm-gold);
+}
+
+body .skill:hover,
+body .skill.show:hover {
+    box-shadow: 0 14px 28px #0b1f4b26;
+}
+
+body.dark-mode .skill {
+    background: #0f1d42;
+    color: #ffffff;
+}
+
+/* ---------- Proyek ---------- */
+body .project-card {
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid var(--rm-gold);
+}
+
+body .project-image {
+    background: #e6ecfa;
+}
+
+body .project-category {
+    color: #b8860b;
+}
+
+body .tech-list span {
+    background: var(--rm-navy);
+    color: var(--rm-gold);
+}
+
+body.dark-mode .project-card {
+    background: #0f1d42;
+    border-color: #1f3060;
+    border-top-color: var(--rm-gold);
+}
+
+body.dark-mode .project-image {
+    background: #0b1633;
+}
+
+body.dark-mode .project-content > p:not(.project-category) {
+    color: #cbd5e1;
+}
+
+body.dark-mode .project-category {
+    color: var(--rm-gold);
+}
+
+body.dark-mode .tech-list span {
+    background: #1b2d63;
+}
+
+body .project-intro {
+    color: #475569;
+}
+
+body.dark-mode .project-intro {
+    color: #cbd5e1;
+}
+
+/* ---------- Kontak ---------- */
+body #kontak,
+body.dark-mode #kontak {
+    background-image: linear-gradient(135deg, #06122e, #0b2a6b);
+    background-color: var(--rm-navy-dark);
+    color: #ffffff;
+}
+
+body #kontak h2,
+body #kontak .label {
+    color: #ffffff;
+}
+
+body #kontak .label {
+    color: var(--rm-gold);
+}
+
+body #kontak .contact-description {
+    color: #cbd5e1;
+}
+
+body #kontak .back-to-top {
+    color: var(--rm-gold);
+}
+
+/* ---------- Modal form ---------- */
+.modal-box {
+    border-top: 5px solid var(--rm-gold);
+}
+
+body .modal-box h3,
+body .modal-box #contactForm label {
+    color: var(--rm-navy);
+}
+
+body.dark-mode .modal-box h3,
+body.dark-mode .modal-box #contactForm label {
+    color: #ffffff;
+}
+
+body #contactForm button[type="submit"] {
+    background: var(--rm-navy);
+    color: var(--rm-gold);
+    font-weight: bold;
+}
+
+body #contactForm button[type="submit"]:hover {
+    background: var(--rm-navy-mid);
+}
+
+body #contactForm input:focus,
+body #contactForm textarea:focus {
+    border-color: var(--rm-gold);
+    box-shadow: 0 0 0 4px #febe1033;
+}
+
+/* ---------- Footer ---------- */
+body footer,
+body.dark-mode footer {
+    background: var(--rm-navy-dark);
+    color: #cbd5e1;
+    border-top: 3px solid var(--rm-gold);
+}
+
+body.dark-mode footer {
+    background: #030816;
+}
+
+/* ---------- FITUR TAMBAHAN ---------- */
+
+/* Progress bar scroll di paling atas */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 3000;
+    background: linear-gradient(90deg, var(--rm-gold), var(--rm-gold-soft), #ffffff);
+    transform: scaleX(0);
+    transform-origin: left;
+    pointer-events: none;
+}
+
+/* Tombol melayang kembali ke atas */
+.fab-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1500;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--rm-gold);
+    border-radius: 50%;
+    background: var(--rm-navy);
+    color: var(--rm-gold);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px #0b1f4b55;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease,
+        background 0.25s ease;
+}
+
+.fab-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.fab-top:hover {
+    background: var(--rm-gold);
+    color: var(--rm-navy-dark);
+    transform: translateY(-4px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .hero::after {
+        background-image:
+            radial-gradient(
+                circle at 90% 115%,
+                transparent 0 150px,
+                #ffffff1f 151px 154px,
+                transparent 155px
+            );
+    }
+
+    .fab-top {
+        right: 14px;
+        bottom: 14px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .fab-top {
+        transition: none;
+    }
+}
+/* =========================================================
+   FOTO PROFIL POP-OUT — foto keluar dari lingkaran
+   Tempel di paling bawah style.css
+   ========================================================= */
+
+.hero-image {
+    --d: 360px;                      /* diameter lingkaran */
+}
+
+body .hero-image {
+    flex: 0 0 var(--d);
+    width: var(--d);
+    height: var(--d);
+    position: relative;
+    margin-top: 60px;                /* ruang untuk kepala yang keluar */
+}
+
+/* Lingkaran di belakang */
+body .hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--rm-gold), #b8860b);
+    box-shadow:
+        0 20px 50px #00000066,
+        inset 0 0 0 8px #ffffff22;
+}
+
+/* Matikan bingkai persegi dari versi sebelumnya */
+body .hero-image::after {
+    display: none;
+}
+
+/* Foto: lebih tinggi dari lingkaran, bagian bawah dipotong bulat */
+body .hero-image img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 125%;                    /* 25% bagian atas keluar dari lingkaran */
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center bottom;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    animation: none;
+    clip-path: inset(-200px -20px 0 -20px round 0 0 calc(var(--d) / 2) calc(var(--d) / 2));
+    filter: drop-shadow(0 12px 18px #00000055);
+}
+
+/* Floating halus pada seluruh bingkai foto */
+@keyframes floatFrame {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+body .hero-image {
+    animation:
+        zoomIn 1s var(--ease-out) 0.3s backwards,
+        floatFrame 7s ease-in-out 1.4s infinite;
+}
+
+/* Laptop kecil / tablet */
+@media (max-width: 900px) {
+    .hero-image { --d: 300px; }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .hero-image { --d: 250px; }
+
+    body .hero-image {
+        flex: none;
+        margin-top: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body .hero-image {
+        animation: none;
+    }
+}
+/* =========================================================
+   FOTO PROFIL: pas di dalam bulatan, kepala sedikit keluar
+   Satu-satunya blok foto profil. Tempel di paling bawah.
+   ========================================================= */
+
+.hero-image {
+    --d: 340px;                      /* diameter lingkaran */
+}
+
+body .hero .hero-image {
+    flex: 0 0 var(--d);
+    width: var(--d);
+    height: var(--d);
+    margin-top: 60px;                /* ruang untuk kepala yang keluar */
+    position: relative;
+    z-index: 0;
+    animation:
+        zoomIn 1s var(--ease-out) 0.3s backwards,
+        floatFrame 7s ease-in-out 1.4s infinite;
+}
+
+/* Lingkaran emas, tepat di belakang foto */
+body .hero .hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--rm-gold), #b8860b);
+    box-shadow: 0 20px 50px #00000055, inset 0 0 0 8px #ffffff22;
+    z-index: 0;
+}
+
+/* Cincin tipis di luar lingkaran */
+body .hero .hero-image::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: -14px;
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
+    transform: none;
+    border-radius: 50%;
+    border: 2px solid #ffffff44;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Foto: lebar = lingkaran, nempel di dasar,
+   bagian bawah dipotong mengikuti bulatan, bagian atas bebas keluar */
+body .hero .hero-image img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;                    /* tinggi mengikuti rasio PNG */
+    max-width: none;
+    aspect-ratio: auto;
+    object-fit: unset;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    animation: none;
+    filter: drop-shadow(0 12px 14px #00000055);
+    clip-path: inset(-200px 0 0 0 round 0 0 calc(var(--d) / 2) calc(var(--d) / 2));
+}
+
+@keyframes floatFrame {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+@media (max-width: 900px) {
+    .hero-image { --d: 290px; }
+}
+
+@media (max-width: 600px) {
+    .hero-image { --d: 240px; }
+
+    body .hero .hero-image {
+        flex: none;
+        margin-top: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body .hero .hero-image { animation: none; }
+}

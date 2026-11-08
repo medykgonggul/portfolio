@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png.png">
+     <meta name="description"
+        content="Website portofolio saya sebagai calon Web Developer. Lihat profil, keahlian, dan proyek website yang telah saya buat.">
+
+    <meta name="keywords"
+        content="Web Developer, HTML, CSS, JavaScript, Portofolio">
+
+    <meta name="author" content="Web Developer">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#beranda" class="logo">Portfolio.</a>
+
+        <div class="nav-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#keahlian">Keahlian</a>
+            <a href="#proyek">Proyek</a>
+        </div>
+        <button id="darkModeToggle">
+          🌙 Dark Mode
+         </button>
+    </nav>
+
+    
+<header id="beranda" class="hero">
+    <div class="hero-text">
+        <p class="label">HALO, SELAMAT DATANG!</p>
+
+        <h1>Halo, saya Falentinus G.</h1>
+
+        <h2>Calon Web Developer</h2>
+
+        <p>
+            Saya sedang belajar membangun website menggunakan
+            HTML, CSS, dan JavaScript. Saya senang belajar
+            teknologi dan membuat proyek yang bermanfaat.
+        </p>
+
+        <a href="#proyek" class="btn">Lihat Proyek Saya</a>
+        <a href="#kontak" class="btn btn-outline">Hubungi Saya</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/foto profil.png"
+             alt="Foto profil saya">
+    </div>
+</header>
+
+    <section id="tentang" class="section reveal">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya sedang mengembangkan keterampilan Web Developer
+            dengan belajar membuat website yang menarik,
+            responsif, dan mudah digunakan.
+        </p>
+    </section>
+
+    <section id="keahlian" class="section reveal">
+        <h2>Keahlian Saya</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Responsive Design</div>
+        </div>
+    </section>
+
+    
+<section id="proyek" class="section reveal">
+    <p class="label">PORTFOLIO SAYA</p>
+    <h2>Proyek yang Saya Buat</h2>
+    <p class="project-intro">
+        Berikut adalah proyek latihan yang saya kembangkan
+        untuk meningkatkan kemampuan Web Developer.
+    </p>
+
+    <div class="project-grid">
+
+        <article class="project-card reveal">
+            <div class="project-image">
+                <img src="images/toko medyk.jpg.jpeg"
+                     alt="Tampilan dashboard Toko Medyk">
+            </div>
+
+            <div class="project-content">
+                <p class="project-category">Proyek Web</p>
+
+                <h3>Toko Medyk — Manajemen Inventaris</h3>
+
+                <p>
+                    Website untuk mengelola data produk, harga,
+                    stok barang, transaksi masuk dan keluar,
+                    serta laporan inventaris.
+                </p>
+
+                <div class="tech-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>LocalStorage</span>
+                </div>
+
+               
+              <a href="../inventaris/produk.html" class="btn">Lihat Demo</a>
+                
+            </div>
+        </article>
+
+        <article class="project-card reveal">
+            <div class="project-image project-placeholder">
+                <span>🌐</span>
+            </div>
+
+            <div class="project-content">
+                <p class="project-category">Proyek Berikutnya</p>
+
+                <h3>Website Selanjutnya</h3>
+
+                <p>
+                    Saya akan terus belajar dan membuat
+                    proyek website baru untuk menambah
+                    pengalaman dan portofolio.
+                </p>
+
+                <div class="tech-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="#kontak" class="btn btn-outline">
+                    Segera Hadir
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+       
+
+<section id="kontak" class="section reveal">
+    <p class="label">MARI TERHUBUNG</p>
+
+    <h2>Hubungi Saya</h2>
+
+    <p class="contact-description">
+        Punya ide proyek website atau ingin berdiskusi?
+        Silakan hubungi saya melalui WhatsApp atau email.
+    </p>
+
+    <div class="contact-buttons">
+        <a
+            href="https://wa.me/085871424191?text=Halo%2C%20saya%20ingin%20berdiskusi%20tentang%20website."
+            class="btn btn-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer">
+            WhatsApp Saya
+        </a>
+
+        <a
+            href="mailto:falentinusgonggul@gmail.com?subject=Kontak%20Portofolio"
+            class="btn btn-email">
+            Kirim Email
+        </a>
+    </div>
+    
+
+    <a href="#beranda" class="back-to-top">
+        ↑ Kembali ke Atas
+    </a>
+</section>
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button type="button" class="modal-close" id="closeModal" aria-label="Tutup">&times;</button>
+
+        <h3 id="modalTitle">Kirim Pesan</h3>
+        <p class="modal-sub">Isi form di bawah, pesan akan langsung sampai ke email saya.</p>
+
+        <form id="contactForm">
+            <div>
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" placeholder="Masukkan nama kamu">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan email kamu">
+            </div>
+
+            <div>
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" placeholder="Tulis pesan kamu"></textarea>
+            </div>
+
+            <button type="submit">Kirim Pesan</button>
+
+            <p id="formMessage"></p>
+        </form>
+    </div>
+</div>
+
+    <footer>
+        <p>© 2026 Portfolio Saya | Dibuat dengan HTML dan CSS</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
